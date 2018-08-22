@@ -13,15 +13,21 @@ section#results {
 }
 
 table {
+    border: 1px solid rgb(200,200,200);
     border-collapse: collapse;
     margin-bottom: 50px;
+    empty-cells: hide;
+    padding: 2px 10px;
 }
 
 table thead td {
     font-weight: bold;
 }
-
-table td {
+th {
+    background-color: #f0eae2;
+    font-weight: bold;
+}
+td, th {
     border: 1px solid rgb(200,200,200);
     padding: 2px 10px;
 }

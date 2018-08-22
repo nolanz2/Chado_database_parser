@@ -37,14 +37,35 @@ function processJSON( data ) {
         // create a row and append it to the body of the table
         $('<tr/>', { "id" : this_row_id } ).appendTo('tbody');
         
-        // add the locus column
+        // add the uniquename column
         $('<td/>', { "text" : item.locus_id } ).appendTo('#' + this_row_id);
         
-        // add the product column
+	// add the product column
         $('<td/>', { "text" : item.product } ).appendTo('#' + this_row_id);
 
+        // add the fmin column
+        $('<td/>', { "text" : item.fmin } ).appendTo('#' + this_row_id);
+
+	// add the fmax column
+        $('<td/>', { "text" : item.fmax } ).appendTo('#' + this_row_id);
+
     });
-    
+
+
+$('table th:nth-child(1), table td:nth-child(1)').addClass('locus_tag');
+$('table th:nth-child(2), table td:nth-child(2)').addClass('prod');
+$('table th:nth-child(3), table td:nth-child(3)').addClass('fmin');
+$('table th:nth-child(4), table td:nth-child(4)').addClass('fmax');
+$("input:checkbox:not(:checked)").each(function() {
+    var column = "table ." + $(this).attr("name");
+    $(column).hide();
+});
+
+
+$("input:checkbox").click(function(){
+    var column = "table ." + $(this).attr("name");
+    $(column).toggle();
+});    
     // now show the result section that was previously hidden
     $('#results').show();
 }
@@ -52,12 +73,11 @@ function processJSON( data ) {
 
 // run our javascript once the page is ready
 $(document).ready( function() {
+    
     // define what should happen when a user clicks submit on our search form
     $('#submit').click( function() {
         runSearch();
         return false;  // prevents 'normal' form submission
     });
-    $(function(){
-		autoFill();
-	});
+	
 });
