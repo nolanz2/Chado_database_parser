@@ -13,7 +13,7 @@ Web browser access to http://bfx.eng.jhu.edu/ncligro1/final/search.html
 
  * Recommended modules
 
-MySAQL connector(https://dev.mysql.com/doc/connector-python/en/)
+MySQL connector(https://dev.mysql.com/doc/connector-python/en/)
 
 
  * Usage
