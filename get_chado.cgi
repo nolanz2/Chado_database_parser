@@ -7,7 +7,7 @@ import mysql.connector
 print("Content-Type: application/json\n\n")
 
 chado_list = list()
-conn = mysql.connector.connect(user='ncligro1', password='Fuckme44', host='localhost', buffered=True)
+conn = mysql.connector.connect(user='username', password='password', host='localhost', buffered=True)
 cursor = conn.cursor()
 databases = ("show databases")
 cursor.execute(databases)
