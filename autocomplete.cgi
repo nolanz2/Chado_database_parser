@@ -15,7 +15,7 @@ def main():
     # drop_term = form.getvalue('databases')
     # print(drop_term)
 
-    conn = mysql.connector.connect(user='ncligro1', password='Fuckme44', host='localhost', database='ncligro1_final')
+    conn = mysql.connector.connect(user='username', password='password', host='localhost', database='database')
     cursor = conn.cursor()
    
 
