@@ -16,7 +16,7 @@ def main():
     if form.getvalue('databases'):
         drop_term = form.getvalue('databases')
 
-    conn = mysql.connector.connect(user='ncligro1', password='Fuckme44', host='localhost', database=drop_term)
+    conn = mysql.connector.connect(user='username', password='password', host='localhost', database=drop_term)
     cursor = conn.cursor()
     
     qry = """
